@@ -27,7 +27,7 @@ tmux new-session -d -s $session
 
 # --- Start tunnels --- #
 
-tmux new-window  -t $session:2 -n tunnels
+tmux new-window  -t $session:1 -n tunnels
 tmux send-keys "./tunnels.sh" ENTER
 sleep 5
 
@@ -53,8 +53,8 @@ tmux send-keys -t $bi "cd lib-bi;npm run watch" ENTER
 
 
 # --- Start vim --- #
-tmux new-window -t $session:1 -n vim
-tmux send-keys "cd app && vim" ENTER
+# tmux new-window -t $session:1 -n vim
+# tmux send-keys "cd app && vim" ENTER
 
 # --- Attach --- #
 tmux attach-session -t $session
