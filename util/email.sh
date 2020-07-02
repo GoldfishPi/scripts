@@ -1,4 +1,3 @@
 #!/bin/bash
 
-offlineimap && 
-    neomutt
+offlineimap && neomutt && offlineimap
