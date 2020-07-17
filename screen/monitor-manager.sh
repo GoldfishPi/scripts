@@ -1,18 +1,18 @@
 #!/bin/bash
 
-connected=`xrandr | grep " connected " | awk '{ print$1 }' | grep -v "eDP-1"` 
-hdmi="DP-1"
+single_monitor="single"
+dual_monitors="dual"
 
-echo "connected devices $connected"
+selection=`echo -e "$single_monitor\n$dual_monitors"| dmenu -p "Monitors: "`
 
-if [ -z $connected ]; then
-	xrandr --output eDP-1 --primary
-	xrandr --output eDP-1 --auto
-	echo "no devices connected"
-else
-	xrandr --output "$connected" --primary
-	xrandr --output eDP-1 --off
-	echo "$connected connected!"
+# [ -z $selection ] && exit
+
+if [ "$selection" == "$single_monitor" ] 
+then
+    exec xrandr --output DP-1 --off
 fi
 
-# xrandr --output HDMI-1 --primary
+if [ "$selection" == "$dual_monitors" ] 
+then
+    exec xrandr --output DP-1 --auto --above eDP-1
+fi
