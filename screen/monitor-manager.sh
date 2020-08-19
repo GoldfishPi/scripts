@@ -9,10 +9,10 @@ selection=`echo -e "$single_monitor\n$dual_monitors"| dmenu -p "Monitors: "`
 
 if [ "$selection" == "$single_monitor" ] 
 then
-    exec xrandr --output DP-1 --off
+    exec xrandr --output DP1 --off
 fi
 
 if [ "$selection" == "$dual_monitors" ] 
 then
-    exec xrandr --output DP-1 --auto --above eDP-1
+    exec xrandr --output DP1 --auto --above eDP1
 fi
