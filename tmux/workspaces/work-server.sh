@@ -43,7 +43,7 @@ tmux rename-window "dev-servers"
 
 # Start Api
 tmux send-keys -t $api "cd api" ENTER
-tmux send-keys -t $api "npm start" ENTER
+tmux send-keys -t $api "linkemon" ENTER
 
 # Start App dev server
 tmux send-keys -t $app "cd app;make watch" ENTER
