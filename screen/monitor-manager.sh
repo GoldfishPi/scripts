@@ -1,7 +1,7 @@
 #!/bin/bash
 
-single_monitor="single"
-dual_monitors="dual"
+single_monitor="1"
+dual_monitors="2"
 
 selection=`echo -e "$single_monitor\n$dual_monitors"| dmenu -p "Monitors: "`
 
@@ -14,5 +14,5 @@ fi
 
 if [ "$selection" == "$dual_monitors" ] 
 then
-    exec xrandr --output DP1 --auto --above eDP1
+    exec xrandr --output DP1 --auto --right-of eDP1
 fi
