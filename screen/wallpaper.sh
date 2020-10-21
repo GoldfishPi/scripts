@@ -2,7 +2,7 @@
 
 shopt -s nullglob
 
-cd ~/wallpapers/wallpapers
+cd ~/Pictures/wallpapers
 
 while true; do
         files=()
