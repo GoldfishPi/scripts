@@ -6,5 +6,5 @@
 file=`git --git-dir=$HOME/.cfg ls-files | dmenu -l 10`
 
 if [ $file ]; then
-    alacritty -e bash -c "cd ${folder} && nvim && zsh" &
+    alacritty -e bash -c "nvim ${file} && zsh" &
 fi
