@@ -1,0 +1,10 @@
+lib-bi:/htdocs/lib-bi
+tickr-app:/htdocs/app
+tickr-beat:/htdocs/beat
+tickr-api:/htdocs/api
+tickr-api:/htdocs/pulse
+r_os:~/projects/r_os
+r_chess:~/projects/r_chess
+nvim config:~/.config/nvim
+scripts:~/scripts
+xmonad:~/.xmonad
