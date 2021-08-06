@@ -5,5 +5,5 @@ echo $folder
 
 
 if [ $folder ]; then
-    alacritty -e bash -c "cd ${folder} && nvim && zsh" &
+    $TERMINAL -e bash -c "cd ${folder} && nvim && zsh" &
 fi
